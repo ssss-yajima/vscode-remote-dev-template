@@ -1,0 +1,8 @@
+version: "3.2"
+services:
+  java:
+    # environment:
+    # - HOME=/home/java
+    volumes:
+      - ~/.gitconfig:/home/root/.gitconfig
+      - ~/.ssh:/home/root/.ssh

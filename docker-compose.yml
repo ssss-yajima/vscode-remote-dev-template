@@ -1,0 +1,25 @@
+version: "3.2"
+services:
+  #   db:
+  #     image: postgres:latest
+  #     container_name: bom_db
+  #     restart: always
+  # #    ports:
+  # #      - 5432:5432
+  #     environment:
+  #       POSTGRES_USER: 'dev'
+  #       POSTGRES_PASSWORD: 'pass'
+  #     volumes:
+  #       - ./docker/init_db:/docker-entrypoint-initdb.d
+  java:
+    image: openjdk:11
+    container_name: java11
+    restart: always
+    ports:
+      - 8080:8080
+    tty: true
+    # depends_on:
+    # - db
+    working_dir: /home/root/remotedev
+    volumes:
+      - ./:/home/root/remotedev
